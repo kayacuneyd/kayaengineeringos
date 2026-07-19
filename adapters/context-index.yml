@@ -1,0 +1,251 @@
+# KayaEOS Context Index
+# Maps trigger keywords to canonical resources for load-on-demand retrieval.
+# This is the bridge between user requests and framework resources.
+
+version: "1.0.0"
+generated: 2026-07-19
+
+constitution:
+  path: constitution.md
+  tokens: ~5000
+  always_loaded: false
+
+playbooks:
+  - id: PLBOOK-001
+    title: Build Feature
+    path: playbooks/build-feature.md
+    tokens: ~3500
+    triggers:
+      - feature
+      - implement
+      - build
+      - develop
+      - new feature
+      - feature implementation
+
+  - id: PLBOOK-002
+    title: Bug Fix
+    path: playbooks/bug-fix.md
+    tokens: ~3200
+    triggers:
+      - bug
+      - fix
+      - debug
+      - issue
+      - error
+      - problem
+
+  - id: PLBOOK-003
+    title: Refactor
+    path: playbooks/refactor.md
+    tokens: ~3000
+    triggers:
+      - refactor
+      - clean up
+      - improve structure
+      - restructure
+      - simplify
+      - tech debt
+
+  - id: PLBOOK-004
+    title: Code Review
+    path: playbooks/code-review.md
+    tokens: ~4000
+    triggers:
+      - review
+      - PR
+      - pull request
+      - code review
+      - review code
+
+  - id: PLBOOK-005
+    title: Testing
+    path: playbooks/testing.md
+    tokens: ~2800
+    triggers:
+      - test
+      - spec
+      - coverage
+      - unit test
+      - integration test
+      - e2e test
+      - write tests
+
+  - id: PLBOOK-006
+    title: ADR Creation
+    path: playbooks/adr-creation.md
+    tokens: ~3000
+    triggers:
+      - ADR
+      - architecture decision
+      - decision record
+      - architectural decision
+      - create ADR
+
+  - id: PLBOOK-007
+    title: Deployment
+    path: playbooks/deployment.md
+    tokens: ~2800
+    triggers:
+      - deploy
+      - release
+      - ship
+      - production
+      - publish
+
+  - id: PLBOOK-008
+    title: Security Review
+    path: playbooks/security-review.md
+    tokens: ~3200
+    triggers:
+      - security
+      - vulnerability
+      - auth
+      - CVE
+      - security review
+      - security audit
+
+  - id: PLBOOK-009
+    title: UI Design
+    path: playbooks/ui-design.md
+    tokens: ~3500
+    triggers:
+      - design
+      - UI
+      - UX
+      - component design
+      - interface
+      - layout
+      - style
+      - visual
+      - look and feel
+
+  - id: PLBOOK-010
+    title: Design Review
+    path: playbooks/design-review.md
+    tokens: ~3500
+    triggers:
+      - design review
+      - UI review
+      - UX review
+      - visual review
+      - review design
+      - review UI
+
+  - id: PLBOOK-011
+    title: Design-to-Code
+    path: playbooks/design-to-code.md
+    tokens: ~3500
+    triggers:
+      - design to code
+      - implement design
+      - convert design
+      - from design
+      - screenshot to code
+      - figma to code
+      - mockup to code
+
+agents:
+  - id: AGENT-001
+    title: Architect
+    path: agents/architect.md
+    tokens: ~800
+    triggers:
+      - architecture
+      - system design
+      - architectural
+      - design pattern
+      - ADR
+      - decision
+      - structure
+
+  - id: AGENT-002
+    title: Implementer
+    path: agents/implementer.md
+    tokens: ~700
+    triggers:
+      - implement
+      - build
+      - develop
+      - code
+      - fix
+      - feature
+      - bug
+      - refactor
+
+  - id: AGENT-003
+    title: Reviewer
+    path: agents/reviewer.md
+    tokens: ~600
+    triggers:
+      - review
+      - PR
+      - pull request
+      - code review
+
+  - id: AGENT-004
+    title: Tester
+    path: agents/tester.md
+    tokens: ~600
+    triggers:
+      - test
+      - spec
+      - coverage
+      - QA
+      - quality assurance
+
+  - id: AGENT-005
+    title: Security
+    path: agents/security.md
+    tokens: ~700
+    triggers:
+      - security
+      - vulnerability
+      - auth
+      - CVE
+
+  - id: AGENT-006
+    title: Docs
+    path: agents/docs.md
+    tokens: ~600
+    triggers:
+      - document
+      - docs
+      - documentation
+      - readme
+
+  - id: AGENT-007
+    title: Designer
+    path: agents/designer.md
+    tokens: ~800
+    triggers:
+      - design
+      - UI
+      - UX
+      - visual
+      - component design
+      - interface
+      - layout
+      - style
+
+adr:
+  index_path: adr/INDEX.md
+  template_path: adr/_template.md
+  triggers:
+    - ADR
+    - architecture decision
+    - decision record
+
+design_tokens:
+  required: true
+  paths:
+    - design/tokens/colors.yml
+    - design/tokens/typography.yml
+    - design/tokens/spacing.yml
+  triggers:
+    - design
+    - UI
+    - UX
+    - style
+    - visual
+    - component
